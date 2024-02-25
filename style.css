@@ -1156,3 +1156,51 @@ nav a:hover::after {
           }
           
           }
+          .contact-text-section {
+            text-align: center;
+            padding: 20px;
+            position: absolute;
+            top: 54%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 10px;
+            width: 60%;
+            font-size: 0.9em;
+        }
+        
+        /* Responsive adjustments */
+        @media only screen and (max-width: 768px) {
+            .contact-text-section {
+                width: 80%; /* Adjust width for smaller screens */
+                font-size: 0.8em; /* Adjust font size for smaller screens */
+            }
+        }
+        
+        @media only screen and (max-width: 480px) {
+            .contact-text-section {
+                width: 90%; /* Further adjust width for even smaller screens */
+                font-size: 0.7em; /* Further adjust font size for even smaller screens */
+            }
+        }
+        
+        
+        .contact-text-content {
+            color: #fff; /* Set your desired text color */
+        }
+        
+          .image-section {
+            position: relative;
+            width: 100%;
+            max-height: 300px; /* Set the maximum height for the image */
+            overflow: hidden;
+        }
+        
+        .background-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
