@@ -17,6 +17,16 @@ nav {
     background-color: #FFFFFF;
     overflow: hidden;
     text-align: right;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: top 0.3s; /* Add a smooth transition effect */
+}
+
+/* Add a class to the logo when the navbar is scrolled */
+nav.scrolled .logo {
+    padding: 5px; /* Adjust padding when scrolled */
 }
 
 nav a {
@@ -48,6 +58,7 @@ nav a:hover::after {
 .logo {
     float: left;
     padding: 10px;
+    transition: padding 0.3s; /* Add a smooth transition effect */
 }
 
 .logo img {
@@ -201,7 +212,7 @@ nav a:hover::after {
     display: inline-block;
     padding: 15px 30px; /* Increase padding for larger button */
     background-color: #6c998f;
-    color: black;
+  color: black;
     text-decoration: none;
     border-radius: 30px; /* Make button more rounded */
     margin-top: 40px; /* Add space between images and button */
@@ -214,6 +225,7 @@ nav a:hover::after {
   .about-button:hover {
     background-color: rgb(164, 211, 227);
   }
+
 /* faq */
 .wrapper {
     max-width: 75%;
@@ -224,7 +236,7 @@ nav a:hover::after {
 .wrapper>h1 {
     margin: 1.5rem 0;
     text-align: center;
-    margin-top: 150px;
+    margin-top: 17%;
 }
 
 .wrapper>h1 {
@@ -232,7 +244,7 @@ nav a:hover::after {
 }
 
 .accordion {
-    background-color: rgb(223, 251, 247);
+    background-color: rgb(156, 175, 211);
     color: black;
     cursor: pointer;
     font-size: 1rem;
@@ -245,7 +257,7 @@ nav a:hover::after {
     justify-content: space-between;
     align-items: center;
     font-weight: bold;
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .accordion i {
@@ -254,14 +266,14 @@ nav a:hover::after {
 
 .active,
 .accordion:hover {
-    background-color: rgb(252, 252, 245);
+    background-color: rgb(220, 223, 229)
 }
 
 .pannel {
     padding: 0 2rem 2.5rem 2rem;
     background-color: white;
     overflow: hidden;
-    background-color: rgb(252, 252, 245);
+    background-color: rgb(220, 223, 229);
     display: none;
 }
 
@@ -1104,7 +1116,7 @@ nav a:hover::after {
           
           /* Toggle Switch */
           
-          .theme-switch-wrapper {
+          /* .theme-switch-wrapper {
             display: flex;
             align-items: center;
             text-align: center;
@@ -1112,9 +1124,9 @@ nav a:hover::after {
             position: absolute;
             top: 0.5rem;
             right: 0;
-          }
+          } */
           
-          .slider {
+          /* .slider {
             background-color: #ccc;
             bottom: 0;
             cursor: pointer;
@@ -1123,9 +1135,9 @@ nav a:hover::after {
             right: 0;
             top: 0;
             transition: .4s;
-          }
+          } */
           
-          .slider:before {
+          /* .slider:before {
             background-color: #fff;
             bottom: 0.25rem;
             content: "";
@@ -1135,8 +1147,8 @@ nav a:hover::after {
             position: absolute;
             transition: .4s;
           }
-          
-          input:checked + .slider {
+           */
+          /* input:checked + .slider {
             background-color: var(--button-color);
           }
           
@@ -1150,7 +1162,7 @@ nav a:hover::after {
           
           .slider.round:before {
             border-radius: 50%;
-          }
+          } */
           
           #error, #success-msg {
             width: 40vw;
@@ -1185,15 +1197,15 @@ nav a:hover::after {
             button {
               width: 7rem;
             }
-            .theme-switch-wrapper {
+            /* .theme-switch-wrapper {
               width: 120px;
             }
             .theme-switch {
             height: 28px;
             width: 50px;
-          }
+          } */
           
-          .theme-switch input {
+          /* .theme-switch input {
             display:none;
           }
           
@@ -1218,40 +1230,9 @@ nav a:hover::after {
           .slider.round:before {
             border-radius: 50%;
           }
-          
+           */
           }
-          .contact-text-section {
-            text-align: center;
-            padding: 20px;
-            position: absolute;
-            top: 54%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: black;
-            z-index: 1;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 10px;
-            border-radius: 10px;
-            width: 60%;
-            font-size: 0.9em;
-        }
-        
-        /* Responsive adjustments */
-        @media only screen and (max-width: 768px) {
-            .contact-text-section {
-                width: 80%; /* Adjust width for smaller screens */
-                font-size: 0.8em; /* Adjust font size for smaller screens */
-            }
-        }
-        
-        @media only screen and (max-width: 480px) {
-            .contact-text-section {
-                width: 90%; /* Further adjust width for even smaller screens */
-                font-size: 0.7em; /* Further adjust font size for even smaller screens */
-            }
-        }
-        
-        
+          
         .contact-text-content {
             color: #fff; /* Set your desired text color */
         }
@@ -1259,15 +1240,15 @@ nav a:hover::after {
           .image-section {
             position: relative;
             width: 100%;
-            max-height: 300px; /* Set the maximum height for the image */
+            max-height: 400px; /* Set the maximum height for the image */
             overflow: hidden;
+            margin-top: 5%;
         }
         
         .background-image {
             width: 100%;
             height: auto;
             display: block;
-            
         }
         .about-section2 {
             display: flex;
@@ -1315,5 +1296,49 @@ nav a:hover::after {
             transform: translate(-50%, -50%);
             z-index: 1;
         }
+
+ .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Change the last value (0.5) for the desired transparency */
+        }
+        :root {
+            --background-color: black;
+            --text-color: hsl(0, 0%, 100%);
+          }
+          body {
+            margin: 0;
+          }
+          .contact-wrapper {
+            display: grid;
+            place-content: center;
+            /* background-color: var(--background-color); */
+            min-height: 55vh;
+            font-family: "Oswald", sans-serif;
+            font-size: clamp(1.5rem, 1rem + 5vw, 15rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-color);
+          }
+          
+          .contact-wrapper > div {
+            grid-area: 1/1/-1/-1;
+          }
+          .top {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+          }
+          .bottom {
+            clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+            color: transparent;
+            /* background: -webkit-linear-gradient(177deg, black 53%, var(--text-color) 65%); */
+            background: linear-gradient(177deg, black 53%, var(--text-color) 65%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            transform: translateX(-0.02em);
+          }
         
         
+
