@@ -121,3 +121,18 @@ const emailIsValid = email => {
 }
 
 submitBtn.addEventListener('click', validate);
+
+
+    $(document).ready(function () {
+        var nav = $('nav');
+        var logo = $('.logo');
+        var navHeight = nav.outerHeight();
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > navHeight) {
+                nav.addClass('scrolled');
+            } else {
+                nav.removeClass('scrolled');
+            }
+        });
+    });
