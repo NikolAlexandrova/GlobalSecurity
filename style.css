@@ -1267,16 +1267,53 @@ nav a:hover::after {
             width: 100%;
             height: auto;
             display: block;
+            
         }
         .about-section2 {
-            /* background-image: url('Images/1e5b30d4-2bf2-4eba-b780-88080e827c6a.jpeg');  */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 100vh; /* Using min-height instead of height for responsiveness */
             background-size: cover;
             background-position: center;
-            color: #ffffff; /* Text color for better visibility */
+            color: black;
+            position: relative; /* Make the section position relative for absolute positioning of title */
         }
         
         .about-content2 {
-            background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent black background color */
-            padding: 20px; /* Adjust padding as needed */
+            background-color: rgb(155, 164, 167);
+            padding: 65px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* Adjusted to start from the left */
+            flex-direction: row; /* Changed to horizontal layout */
         }
+        
+        .about-image-right {
+            width: 500px;
+            height: auto;
+            margin-left: 20px;
+            border-radius: 50%;
+            opacity: 0; /* Initially set to 0 */
+            transition: opacity 0.5s ease; /* Add transition effect */
+        }
+        
+        .about-image-right.visible {
+            opacity:1.5; /* Change opacity to 1 when visible */
+        }
+        
+        
+        
+        .section-title {
+            color: #010712;
+            font-size: 35px;
+            text-shadow: white 2px 3px;
+            position: absolute;
+            top: 30%; /* Position the title at the vertical center */
+            left: 35%; /* Position the title at the horizontal center */
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        
         
