@@ -47,25 +47,25 @@
             </div>
         </section>
     </div>
-        <hr class="line-sections">
+        <!-- <hr class="line-sections"> -->
+        <section class="about-section2" id="aboutSection-about">
+            <h2 class="section-title">Ron Zelig</h2>
+            <div class="about-content2">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <img src="Images/defense.jpeg" alt="Image Description" class="about-image-right" data-aos="fade-down" data-aos-duration="1000">
+            </div>
+        </section>
         
-    <section class="about-section-about" id="aboutSection-about">
-        <div class="about-image-about">
-            <img src="Images/1e5b30d4-2bf2-4eba-b780-88080e827c6a.jpeg" alt="About Us Image">
-        </div>
-        <div class="about-content-about">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                et
-                dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam.</p>
-        </div>
-    </section>
-    <hr class="line-sections">
+        
+        
+    <!-- <hr class="line-sections"> -->
 
     <div class="py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-0 lg:px-0 lg:py-4">
         <div class="max-w-xl mb-10 md:mx-auto md:text-center lg:max-w-2xl md:mb-12">
@@ -152,6 +152,35 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        once: true // Run animation only once
+    });
+
+    // Function to check if element is in viewport
+    function isInViewport(element) {
+        var bounding = element.getBoundingClientRect();
+        return (
+            bounding.top >= 0 &&
+            bounding.left >= 0 &&
+            bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Function to handle scroll event
+    function handleScroll() {
+        var image = document.querySelector('.about-image-right');
+        if (isInViewport(image)) {
+            image.classList.add('visible');
+        }
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+</script>
+
 
 </body>
 <footer class="footer-distributed">

@@ -122,8 +122,7 @@ const emailIsValid = email => {
 
 submitBtn.addEventListener('click', validate);
 
-
-    $(document).ready(function () {
+ $(document).ready(function () {
         var nav = $('nav');
         var logo = $('.logo');
         var navHeight = nav.outerHeight();
@@ -136,3 +135,4 @@ submitBtn.addEventListener('click', validate);
             }
         });
     });
+
