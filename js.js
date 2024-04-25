@@ -11,13 +11,15 @@ document.addEventListener("DOMContentLoaded", function () {
         // Adjust this value to set when the elements become visible
         var aboutTriggerPoint = aboutSection.offsetTop - window.innerHeight * 0.7;
 
+       
+
         // Check if the about section is in the viewport
         if (isInViewport(aboutSection, aboutTriggerPoint)) {
-            mainSection.classList.add("overlap"); // Add a class for overlap on scroll
+            aboutSection.classList.add("overlap"); // Add a class for overlap on scroll
             aboutContent.classList.add("visible");
             aboutImage.classList.add("visible");
         } else {
-            mainSection.classList.remove("overlap"); // Remove the class if not in viewport
+            aboutSection.classList.remove("overlap"); // Remove the class if not in viewport
             aboutContent.classList.remove("visible");
             aboutImage.classList.remove("visible");
         }
@@ -28,6 +30,32 @@ document.addEventListener("DOMContentLoaded", function () {
         return rect.top <= triggerPoint;
     }
 });
+
+
+
+
+// window.addEventListener('scroll', function(){
+//     var sections = this.document.querySelectorAll('Section'.toLowerCase);
+
+//     for(var i = 0; i < sections.length;i++){
+//         var currentSection = sections[i];
+//         var nextSection = section[i+1];
+
+//         if(nextSection){
+//             var curreentSectionRect = currentSection.getBoundingClientRect();
+//             var nexSectionRect = nextSection.getBoundingClientRect();
+
+//             if(curreentSectionRect.bottom >= 0 && nexSectionRect.top <= 0){
+//                 curreentSectionRect.classList.add('overlap');
+//                 nextSection.classList.add('visible');
+//             }else{
+//                 curreentSectionRect.classList.remove('overlap');
+//                 nexSectionRect.classList.remove('visible')
+//             }
+//         }
+
+//     }
+// })
 
 var modal = document.getElementById("imageModal");
 
