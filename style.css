@@ -1457,3 +1457,177 @@ body {
     color: #2ac5ed;
     font-weight:bold;
 }                
+
+.faq-header {
+    background-image: url('Images/mainimage.jpeg');
+    background-position: center;
+    padding: 100px 50px;
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    border-radius: inherit;
+  }
+  
+  .faq-header h1 {
+    position: relative;
+    z-index: 2;
+    bottom: 10px;
+  }
+  
+  /* Search container */
+  .search-container {
+      position: absolute;
+      top: 170px; /* Adjust in media query for smaller screens */
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      width: 80%; /* Start with a higher percentage and decrease in media queries */
+      max-width: 500px;
+      z-index: 2;
+    }
+  
+  
+    .search-container input[type="text"] {
+      flex-grow: 1;
+      border: none;
+      padding: 1em; /* Use em to scale padding with font size */
+      font-size: 1em;
+    }
+  
+    /* Search button */
+    .search-container button {
+      background-color: #9CAFD3;
+      color: white;
+      padding: 1em; /* Use em to scale padding with font size */
+      border: none;
+      cursor: pointer;
+    }
+  
+  .search-container button:hover {
+    background-color: #9CAFD3;
+  }
+  
+  .faq-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 50px;
+  }
+  
+  .faq-sidebar {
+    width: 30%;
+    padding-left: 70px;
+  }
+  
+  .faq-content {
+    width: 50%;
+    padding-right: 90px;
+    margin-top: 90px;
+  }
+  
+  .sidebar-image {
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+    margin-bottom: 30px; /* Add some bottom margin for spacing */
+  }
+  
+  .sidebar-text-content {
+    padding: 20px;
+  }
+  
+  .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin-top: 10px;
+    border-left: 5px solid #9CAFD3;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  
+  /* Media Queries for Responsive Adjustments */
+  @media (max-width: 768px) {
+    .faq-header {
+      padding: 50px 30px; /* Reduced padding for smaller screens */
+      margin-top: 50px;
+    }
+  
+    .search-container {
+      top: auto; /* Reset to default */
+      bottom: -20px; /* Position at the bottom of the header */
+      width: 90%; /* Increase width to fit smaller screens */
+    }
+  
+    .faq-container {
+      flex-direction: column;
+      margin-top: 0; /* Remove extra space on top for smaller screens */
+    }
+  
+    .faq-sidebar {
+      width: 100%; /* Sidebar takes full width */
+      padding: 0; /* Remove extra padding */
+    }
+  
+    .faq-content {
+      width: 100%; /* Content takes full width */
+      padding: 0; /* Remove extra padding */
+      margin-top: 30px; /* Space between sidebar and questions */
+    }
+  
+    .sidebar-image {
+      height: 150px; /* Adjust height for smaller screens */
+      margin-bottom: 20px; /* Adjust spacing for smaller screens */
+    }
+  
+    .accordion, .panel {
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .faq-header {
+      padding: 30px 20px; /* Further reduced padding for very small screens */
+      margin-top: 30px; /* Adjust top margin for very small screens */
+    }
+  
+    .search-container {
+      bottom: -40px; /* Adjust position of search container for small screens */
+    }
+  
+    .sidebar-image {
+      height: 120px; /* Smaller height for mobile */
+    }
+  }
