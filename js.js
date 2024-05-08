@@ -30,10 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return rect.top <= triggerPoint;
     }
 });
-
-
-
-
 // window.addEventListener('scroll', function(){
 //     var sections = this.document.querySelectorAll('Section'.toLowerCase);
 
@@ -164,3 +160,19 @@ submitBtn.addEventListener('click', validate);
         });
     });
 
+    $(document).ready(function() {
+        console.log("Initializing carousel..."); // This should appear in the console
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 10,
+          autoplay: true,
+          autoplayTimeout: 5000,
+          autoplayHoverPause: true,
+          items: 1,
+          nav: true,
+          navText: ["<", ">"],
+          dots: true
+        });
+      });
+      
+      
