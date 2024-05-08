@@ -1783,3 +1783,80 @@ img {
    z-index: -9999;
   }
  
+=======
+    .why-choose-us {
+        text-align: center;
+        padding: 20px;
+        max-width: 1200px; /* Controls the max width of the content */
+        margin: 0 auto; /* Centers the content horizontally */
+    }
+    
+    .why-choose-us h1 {
+        font-size: 24px;
+        color: #000;
+    }
+    
+    .why-choose-us p {
+        font-size: 16px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        color: #555;
+    }
+    
+    .service-boxes {
+        display: flex;
+        justify-content: space-around; /* Distributes space evenly between the boxes */
+        flex-wrap: wrap; /* Allows boxes to wrap onto the next line */
+        gap: 20px; /* Adds space between the boxes */
+    }
+    
+    .box {
+        width: 30%; /* Box width, adjust as necessary */
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 10px;
+        background: #fff;
+        transition: transform 0.3s ease, box-shadow 0.5s ease;
+        cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
+    }
+    
+    .box:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .box img {
+        width: 60px;
+        height: auto;
+    }
+    
+    .box h2 {
+        font-size: 18px;
+        color: #000;
+    }
+    
+    .box p {
+        font-size: 14px;
+        color: #666;
+    }
+    
+    /* Ensure responsiveness */
+    @media (max-width: 768px) {
+        .box {
+            width: 100%; /* Makes boxes full width on smaller screens */
+        }
+        /* CSS */
+.image-container img {
+    width: 100%; /* Ensure the image fills its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevents extra space below the image */
+}
+
+.image-container {
+    border-radius: 50%; /* Make the container circular */
+    overflow: hidden; /* Hide any overflow content */
+}
+    }
+
+    }
+
