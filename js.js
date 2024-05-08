@@ -175,5 +175,3 @@ submitBtn.addEventListener('click', validate);
           dots: true
         });
       });
-      
-      
