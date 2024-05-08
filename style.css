@@ -23,13 +23,10 @@ nav {
     top: 0;
     z-index: 1000;
     transition: top 0.3s;
-    /* Add a smooth transition effect */
 }
 
-/* Add a class to the logo when the navbar is scrolled */
 nav.scrolled .logo {
     padding: 5px;
-    /* Adjust padding when scrolled */
 }
 
 nav a {
@@ -62,13 +59,53 @@ nav a:hover::after {
     float: left;
     padding: 10px;
     transition: padding 0.3s;
-    /* Add a smooth transition effect */
 }
 
 .logo img {
     width: 100px;
     height: auto;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo img {
+        width: 80px; /* Smaller logo on smaller screens */
+    }
+
+    nav a {
+        padding: 10px 20px; /* Smaller padding */
+        font-size: 0.9em; /* Smaller font size */
+    }
+
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav.active .nav-links {
+        display: block; /* Show links when nav is active */
+    }
+}
+
+/* Additional media query for very small screens */
+@media (max-width: 480px) {
+    nav a {
+        padding: 8px 10px; /* Even smaller padding */
+    }
+
+    .logo img {
+        width: 70px; /* Even smaller logo */
+    }
+}
+
 
 .main-section {
     position: relative;
@@ -1488,41 +1525,35 @@ body {
   }
   
   /* Search container */
-  .search-container {
+  /* .search-container {
       position: absolute;
-      top: 170px; /* Adjust in media query for smaller screens */
+      top: 450px; 
       left: 50%;
       transform: translateX(-50%);
-      background: rgba(255, 255, 255, 0.7);
+      background: black;
       border-radius: 20px;
       overflow: hidden;
       display: flex;
       justify-content: space-between;
-      width: 80%; /* Start with a higher percentage and decrease in media queries */
+      width: 50%; 
       max-width: 500px;
-      z-index: 2;
+      z-index: 99999999999;
     }
   
   
-    .search-container input[type="text"] {
+    .search-container  {
       flex-grow: 1;
       border: none;
-      padding: 1em; /* Use em to scale padding with font size */
+      padding: -2em; 
       font-size: 1em;
     }
+
+    .search-container p {
+        padding-left: 1rem;
+        color: white;
+    } */
   
-    /* Search button */
-    .search-container button {
-      background-color: #9CAFD3;
-      color: white;
-      padding: 1em; /* Use em to scale padding with font size */
-      border: none;
-      cursor: pointer;
-    }
   
-  .search-container button:hover {
-    background-color: #9CAFD3;
-  }
   
   .faq-container {
     display: flex;
@@ -1631,3 +1662,124 @@ body {
       height: 120px; /* Smaller height for mobile */
     }
   }
+ 
+
+  .services-container, .second-services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 100px auto 0; /* Centers horizontally and adds top margin */
+    gap: 2rem;
+
+}
+.services-card:hover {
+    transform: scale(1.1); /* Increase size by 10% */
+}
+img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.services-card {
+    display: flex;
+    flex-direction: column;
+    width: clamp(20rem, calc(20rem + 2vw), 22rem); /* Responsive width */
+    overflow: hidden;
+    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+}
+
+.card__body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card__body a {
+    color: black;
+    text-decoration: none;
+}
+
+.tag {
+    align-self: flex-start;
+    padding: .25em .75em;
+    border-radius: 1em;
+    font-size: .75rem;
+}
+
+.tag-blue {
+    background: linear-gradient(to bottom, #2F80ED, #56CCF2);
+    color: #fafafa;
+}
+
+.tag-red {
+    background: linear-gradient(to bottom, #ef473a, #cb2d3e);
+    color: #fafafa;
+}
+
+.card__body h4 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.card__footer {
+    display: flex;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+
+.slideshow-container {
+    width: 100vw; /* Sets the width to the full viewport width */
+    position: relative;
+    margin: 0; /* Removes any margin that may center the container */
+    top: 60px; /* Adjust top position as needed */
+    z-index: 999; /* Make sure it's above other content */
+}
+
+.mySlides img {
+    width: 100%; 
+    height: 100%; /* make the images cover the full container */
+    object-fit: cover; /* cover the whole area, may crop parts of the image */
+}
+
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+  .background-container{
+   z-index: -9999;
+  }
+ 
