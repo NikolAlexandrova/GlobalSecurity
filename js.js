@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //     }
 // })
 
+
 var modal = document.getElementById("imageModal");
 
 // Get the image and insert it inside the modal
