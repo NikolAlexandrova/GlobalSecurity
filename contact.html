@@ -5,165 +5,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-    <title>About Us</title>
-    <style>
-        .hover-card:hover {
-            transform: scale(1.05);
-            background: linear-gradient(to right, #87acf6, #f4f5f6);
-        }
-
-        .hover-card {
-            transition: transform 0.3s ease, background 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            content: '';
-            display: block;
-            margin: auto;
-            height: 3px;
-            width: 100%;
-            background: black;
-        }
-
-        .active-link {
-            color: darkblue;
-            font-weight: bold;
-        }
-
-        .active-link::after {
-            content: '';
-            display: block;
-            margin: auto;
-            height: 3px;
-            width: 100%;
-            background: black;
-        }
-
-        #menu {
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            #menu {
-                display: block;
-            }
-        }
-    </style>
+    <title>Contact Us - Global Security</title>
 </head>
 
-<body class="font-sans bg-white">
-    <nav class="fixed top-0 w-full z-50 bg-white border-b shadow-md">
-        <div class="flex justify-between items-center py-4 px-6">
-            <div class="logo">
-                <img src="Images/security_logo-removebg-preview.png" alt="Your Logo" class="w-24">
-            </div>
-            <div class="md:hidden">
-                <button id="menu-toggle" class="text-gray-800 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-            </div>
-            <div class="hidden md:flex space-x-4">
-                <a href="home.html" class="nav-link text-gray-800 hover:text-gray-600">Home</a>
-                <a href="about.html" class="nav-link text-gray-800 hover:text-gray-600 active-link">About</a>
-                <a href="services.html" class="nav-link text-gray-800 hover:text-gray-600">Services</a>
-                <a href="contact.html" class="nav-link text-gray-800 hover:text-gray-600">Contact Us</a>
-                <a href="faq.html" class="nav-link text-gray-800 hover:text-gray-600">FAQ</a>
-            </div>
+<body class="font-sans bg-gray-100">
+
+    <nav class="flex justify-between items-center p-6 bg-white shadow-md">
+        <div class="logo">
+            <img src="Images/security_logo-removebg-preview.png" alt="Your Logo" class="w-24">
         </div>
-        <div id="menu" class="hidden md:hidden">
-            <a href="home.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Home</a>
-            <a href="about.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 active-link">About</a>
-            <a href="services.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Services</a>
-            <a href="contact.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Contact Us</a>
-            <a href="faq.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">FAQ</a>
+        <div class="space-x-4">
+            <a href="home.html" class="text-gray-800 hover:text-gray-600">Home</a>
+            <a href="about.html" class="text-gray-800 hover:text-gray-600">About</a>
+            <a href="services.html" class="text-gray-800 hover:text-gray-600">Services</a>
+            <a href="contact.html" class="text-gray-800 hover:text-gray-600 active">Contact Us</a>
+            <a href="faq.html" class="text-gray-800 hover:text-gray-600">FAQ</a>
         </div>
     </nav>
 
-    <section class="relative h-96 bg-cover bg-center mt-16" style="background-image: url('Images/pexels-lukas-669283.jpg');">
+    <section class="relative h-80 bg-cover bg-center" style="background-image: url('Images/pexels-lukas-669283.jpg');">
         <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <h1 class="text-5xl font-bold text-white">ABOUT US</h1>
+            <section class="text-center text-white">
+                <h1 class="text-5xl font-bold">Contact Us</h1>
+            </section>
         </div>
     </section>
 
-    <section class="bg-gray-200 py-12">
-        <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between px-6 lg:px-12">
-            <div class="lg:w-1/2 relative mb-8 lg:mb-0 overflow-hidden rounded-lg shadow-lg bg-white transition duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-xl">
-                <div class="rounded-lg overflow-hidden">
-                    <img src="Images/defense.jpeg" alt="Person Image" class="w-full transition duration-300 ease-in-out transform hover:scale-110">
-                </div>
-                <div class="absolute top-0 left-0 bg-gradient-to-b from-transparent to-black w-full h-full opacity-50 transition duration-300 ease-in-out"></div>
-                <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center transition duration-300 ease-in-out opacity-0 hover:opacity-100">
-                    <h2 class="text-3xl lg:text-4xl font-bold mb-4 text-white text-center">Meet John Doe</h2>
-                </div>
-            </div>
-            <div class="lg:w-2/3 lg:pl-20">
-                <div class="text-container bg-white rounded-lg p-6 lg:p-8">
-                    <p class="text-gray-600 leading-relaxed">John Doe is an esteemed figure in the realm of security, boasting an illustrious career spanning more than a decade. With a proven track record of success, John has navigated the complexities of the security landscape with finesse and precision. Throughout his tenure, he has spearheaded a myriad of high-stakes endeavors, deploying innovative strategies to mitigate risks and safeguard assets.</p>
-                    <p class="text-gray-600 leading-relaxed mt-4">Renowned for his unwavering commitment to excellence, John approaches each project with meticulous attention to detail and an unwavering dedication to achieving optimal outcomes. His expertise extends beyond traditional security paradigms, encompassing a holistic understanding of emerging threats and vulnerabilities.</p>
-                    <p class="text-gray-600 leading-relaxed mt-4">A consummate professional, John is revered for his ability to forge strong relationships with clients, earning their trust through transparent communication and proactive problem-solving. His innate ability to anticipate challenges and devise effective solutions has earned him accolades within the industry, positioning him as a trusted advisor and confidant to businesses of all sizes.</p>
-                </div>
-            </div>
+    <div class="container mx-auto my-12 p-6 bg-white shadow-lg flex flex-col md:flex-row">
+        <div class="left-col md:w-1/2 flex items-center justify-center">
+            <img src="Images/1e5b30d4-2bf2-4eba-b780-88080e827c6a.jpeg" alt="Contact Us" class="rounded-lg shadow-lg w-full h-full object-cover">
         </div>
-    </section>
+        <div class="right-col md:w-1/2 p-6">
+            <h1 class="text-3xl font-bold mb-4">Get In Touch</h1>
+            <p class="mb-6">Please ensure that all required fields marked with a red asterisk (*) are filled out.</p>
 
-    <!-- Mission, Vision, Values Section -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6 md:px-12 mt-10">
-        <div class="bg-gray-200 p-6 rounded-lg shadow hover-card">
-            <h2 class="text-xl font-bold mb-2">Our Mission</h2>
-            <p class="text-gray-700">At GSAHS, our mission is to ensure the safety and security of your operations, assets, and people. We believe that a secure environment is the foundation of any successful enterprise, and we are dedicated to providing advanced security solutions that safeguard against today’s ever-evolving threats. Our team of highly trained professionals brings decades of experience in intelligence, counter-terrorism, and security operations to the table, enabling us to handle complex security challenges with unmatched expertise</p>
-        </div>
-        <div class="bg-gray-200 p-6 rounded-lg shadow hover-card">
-            <h2 class="text-xl font-bold mb-2">Our Vision</h2>
-            <p class="text-gray-700">Our vision is to be the world's leading provider of strategic security solutions, recognized for our unwavering integrity, innovative approaches, and enduring commitment to our clients' safety. We aim to continuously evolve our services to stay ahead of global security trends and to provide peace of mind in an uncertain world.</p>
-        </div>
-        <div class="bg-gray-200 p-6 rounded-lg shadow hover-card">
-            <h2 class="text-xl font-bold mb-2">Our Values</h2>
-            <p class="text-gray-700">Integrity and Confidentiality: At the heart of our operations lies a staunch commitment to ethical conduct and maintaining the confidentiality of our clients.
-                Reliability: We pride ourselves on the consistency and dependability of our services, ensuring you can rely on us when it matters most.
-                Proactivity: Our proactive approach in assessing threats and planning accordingly ensures that we stay ahead of risks, providing security that is as dynamic as the world around us.</p>
+            <form id="contact-form" method="post" class="space-y-4">
+                <div>
+                    <label for="name" class="block text-gray-700">Full name <span class="text-red-500">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="Your Full Name" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
+                </div>
+                <div>
+                    <label for="email" class="block text-gray-700">Email Address <span class="text-red-500">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
+                </div>
+                <div>
+                    <label for="message" class="block text-gray-700">Message <span class="text-red-500">*</span></label>
+                    <textarea rows="6" placeholder="Your Message" id="message" name="message" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"></textarea>
+                </div>
+                <button type="submit" id="submit" name="submit" class="w-full px-4 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-700 transition duration-300">Send</button>
+            </form>
+            <div id="error" class="text-red-500 mt-4"></div>
+            <div id="success-msg" class="text-green-500 mt-4"></div>
         </div>
     </div>
 
-    <!-- Additional Sections -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6 md:px-12 py-8">
-        <div class="bg-gray-200 p-6 rounded-lg shadow hover-card">
-            <h2 class="text-xl font-bold mb-2">Quality Assurance</h2>
-            <p class="text-gray-700">We guarantee high standards in all our services, ensuring reliability and efficiency.</p>
-        </div>
-        <div class="bg-gray-200 p-6 rounded-lg shadow hover-card">
-            <h2 class="text-xl font-bold mb-2">Client Focus</h2>
-            <p class="text-gray-700">We are committed to meeting the specific needs of our clients, ensuring their utmost satisfaction.</p>
-        </div>
-        <div class="bg-gray-200 p-6 rounded-lg shadow hover-card">
-            <h2 class="text-xl font-bold mb-2">Innovation</h2>
-            <p class="text-gray-700">We embrace innovation, continuously seeking out new ways to enhance security and service delivery.</p>
-        </div>
-    </div>
-
-    <!-- Call to Action Section -->
-    <section class="bg-teal-500 text-white py-12">
-        <div class="container mx-auto text-center px-6">
-            <h2 class="text-3xl font-bold mb-4">Ready to Secure Your Future?</h2>
-            <p class="mb-8">Contact us today to discuss how Global Security AHS can help protect your assets and ensure the safety of your operations.</p>
-            <a href="contact.html" class="bg-white text-teal-500 font-bold py-3 px-6 rounded-full hover:bg-gray-200 transition duration-300">Contact Us</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-6">
+    <footer class="footer-distributed bg-gray-800 text-white py-6">
         <div class="container mx-auto px-6">
             <div class="flex flex-wrap justify-between">
                 <div class="w-full md:w-1/3 mb-6 md:mb-0">
                     <h3 class="text-2xl font-bold mb-4">Global<span class="text-teal-500">Security</span></h3>
                     <p class="footer-links flex flex-col space-y-2">
-                        <a href="home.html" class="hover:text-gray-400">Home</a>
-                        <a href="about.html" class="hover:text-gray-400">About</a>
-                        <a href="services.html" class="hover:text-gray-400">Services</a>
-                        <a href="contact.html" class="hover:text-gray-400">Contact</a>
+                        <a href="#" class="hover:text-gray-400">Home</a>
+                        <a href="#" class="hover:text-gray-400">About</a>
+                        <a href="#" class="hover:text-gray-400">Services</a>
+                        <a href="#" class="hover:text-gray-400">Contact</a>
                     </p>
-                    <p class="text-gray-400 mt-4">Global Security AHS ©️ 2007</p>
+                    <p class="text-gray-400 mt-4">Global Security AHS © 2007</p>
                 </div>
 
                 <div class="w-full md:w-1/3 mb-6 md:mb-0">
@@ -199,24 +106,20 @@
             </div>
         </div>
     </footer>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script>
-        // Toggle mobile menu
-        document.getElementById('menu-toggle').onclick = function () {
-            var menu = document.getElementById('menu');
-            menu.classList.toggle('hidden');
-        };
 
-        // Set active link
+    <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const navLinks = document.querySelectorAll("nav a");
-            navLinks.forEach(link => {
-                if (link.href === window.location.href) {
-                    link.classList.add("active-link");
+            window.addEventListener("scroll", function () {
+                var nav = document.querySelector('nav');
+                if (window.scrollY > 50) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
                 }
             });
         });
     </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 
 </html>
